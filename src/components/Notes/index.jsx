@@ -18,7 +18,7 @@ export function Notes ({data, tags, ...rest}) {
                 <footer>
                     {tags.map(
                             tag => {
-                                if(tag.id === data.id){
+                                if(tag.note_id === data.id){
                                     return <Tag key={tag.id} title={tag.name}/>                               
                                 }
                             })
