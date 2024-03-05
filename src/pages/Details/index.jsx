@@ -19,6 +19,7 @@ export function Details(){
   const params = useParams()
   const navigate = useNavigate()
 
+ 
 
   function handleBack(){
     navigate(-1)

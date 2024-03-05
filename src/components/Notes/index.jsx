@@ -2,7 +2,7 @@ import { Container } from "./styles";
 import { Tag }  from '../Tag'
 
 export function Notes ({data, tags, ...rest}) {
-
+ 
     return(
         <Container {...rest}>
             <h1>{data.title}</h1>
