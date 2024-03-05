@@ -1,12 +1,12 @@
 import { createContext, useContext, useState, useEffect } from "react";
 import { api } from "../services/api"
-import { useHistory } from 'react-router-dom';
+import { useNavigate } from 'react-router-dom'
 
 export const AuthContext = createContext({})
 
 function AuthProvider({children}) {
     const [data, setData] = useState({})
-    const history = useHistory()
+    const navigate = useNavigate()
 
     async function signIn({email, password}) {
         try {
@@ -34,7 +34,7 @@ function AuthProvider({children}) {
         localStorage.removeItem("@rocketnotes:token")
 
         setData({})
-        history.push('/login')
+        navigate('/')
     }
 
     async function updateProfile({ user, avatarFile }){
