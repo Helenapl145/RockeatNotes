@@ -46,7 +46,7 @@ export function Details(){
   return(
     <Container>
 
-      <Header />
+      <Header> </Header>
 
       {data && (
           <main>
