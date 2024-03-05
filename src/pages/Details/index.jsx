@@ -14,13 +14,12 @@ import { useNavigate, useParams } from 'react-router-dom'
 
 export function Details(){
   const [data, setData] = useState([])
-
+  console.log(data)
 
   const params = useParams()
   const navigate = useNavigate()
 
  
-
   function handleBack(){
     navigate(-1)
   }

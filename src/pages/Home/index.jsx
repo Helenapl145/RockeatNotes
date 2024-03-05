@@ -18,7 +18,7 @@ export function Home() {
     const [search, setSearch] = useState("")
     const [notes, setNotes] = useState([])
 
-    console.log("notes", notes)
+   
     const navigate = useNavigate()
 
     function handleTagSelected(tagName) {
@@ -41,15 +41,14 @@ export function Home() {
     }
 
     function handleDetails(id) {
+        console.log(id)
         navigate(`/details/${id}`)
     }
 
     useEffect(() => {
         async function fetchTags(){
             const response = await api.get("/tags")
-    
             setTags(response.data)
-            console.log("tags", tags)
             
         }
 

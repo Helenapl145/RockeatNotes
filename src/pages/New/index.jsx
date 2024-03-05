@@ -18,8 +18,6 @@ export function New() {
     const [tags, setTags] = useState([])
     const [newTag, setNewTag]  = useState("")
    
-
-
     const [title, setTitle] = useState("")
     const [description, setDescription] = useState("")
 
