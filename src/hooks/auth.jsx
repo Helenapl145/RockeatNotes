@@ -35,7 +35,7 @@ function AuthProvider({children}) {
         
         
         setData({})
-        navigate('/register')
+
     }
 
     async function updateProfile({ user, avatarFile }){
