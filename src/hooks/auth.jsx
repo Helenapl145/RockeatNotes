@@ -1,11 +1,12 @@
 import { createContext, useContext, useState, useEffect } from "react";
 import { api } from "../services/api"
+import { useNavigate } from "react-router-dom";
 
 export const AuthContext = createContext({})
 
 function AuthProvider({children}) {
     const [data, setData] = useState({})
-    
+    const navigate = useNavigate()
 
     async function signIn({email, password}) {
         try {
@@ -31,7 +32,7 @@ function AuthProvider({children}) {
     function signOut(){
         localStorage.removeItem("@rocketnotes:user")
         localStorage.removeItem("@rocketnotes:token")
-
+        navigate('/')
         
         setData({})
     }

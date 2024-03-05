@@ -18,7 +18,6 @@ export function Home() {
     const [search, setSearch] = useState("")
     const [notes, setNotes] = useState([])
 
-    console.log("tags", notes)
     const navigate = useNavigate()
 
     function handleTagSelected(tagName) {
