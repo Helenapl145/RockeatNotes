@@ -32,13 +32,13 @@ function AuthProvider({children}) {
     function signOut(){
         localStorage.removeItem("@rocketnotes:user")
         localStorage.removeItem("@rocketnotes:token")
-        navigate('/')
+        
         
         setData({})
+        navigate('/register')
     }
 
     async function updateProfile({ user, avatarFile }){
-        console.log(user)
         try {
             if(avatarFile) {
                 const fileUploadForm = new FormData()

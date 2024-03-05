@@ -20,7 +20,6 @@ export function Details(){
   const navigate = useNavigate()
 
 
- 
   function handleBack(){
     navigate(-1)
   }
