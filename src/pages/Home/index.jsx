@@ -41,7 +41,7 @@ export function Home() {
     }
 
     function handleDetails(id) {
-        console.log(id)
+        console.log("id", id)
         navigate(`/details/${id}`)
     }
 
