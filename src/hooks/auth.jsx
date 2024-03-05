@@ -1,11 +1,12 @@
 import { createContext, useContext, useState, useEffect } from "react";
 import { api } from "../services/api"
+import { useHistory } from 'react-router-dom';
 
 export const AuthContext = createContext({})
 
 function AuthProvider({children}) {
     const [data, setData] = useState({})
-    
+    const history = useHistory()
 
     async function signIn({email, password}) {
         try {
@@ -32,8 +33,8 @@ function AuthProvider({children}) {
         localStorage.removeItem("@rocketnotes:user")
         localStorage.removeItem("@rocketnotes:token")
 
-        
         setData({})
+        history.push('/login')
     }
 
     async function updateProfile({ user, avatarFile }){
